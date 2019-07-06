@@ -30,6 +30,21 @@ main .carousel .overlay{
     height: 100%;
 }
 
+.btn-success{
+    background-color: #97c93e !important;
+    color: white;
+}
+
+.btn-success:hover{
+    background-color: #73992d !important;
+}
+
+/* #speakers.row.custom-card-deck[class*='col-'] {
+    display: flex;
+    flex:1 0 auto;
+  } */
+
+
 /* Footer */
 footer{
     background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372);

@@ -11,34 +11,34 @@
     <link rel="stylesheet" href="index.css">
     <title>PlatziConf Hawaii</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="assets/images/platzi-logo.png" alt="">
                 Conf Hawaii
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbar">
               <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Conferencia <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#conferencia">Conferencia <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Oradores</a>
+                  <a class="nav-link" href="#speakers">Speakers</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Detalles</a>
+                  <a class="nav-link" href="#details">Detalles</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Ser Orador</a>
+                  <a class="nav-link" href="#be-speaker">Ser Orador</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-platzi" href="#">Tickets</a>
+                  <a class="btn btn-success" href="#" data-toggle="modal" data-target="#compra-modal">Comprar Tickets</a>
                 </li>
                 
               </ul>
@@ -48,7 +48,7 @@
     <!-- /Navbar -->
     <!-- Carrusel -->
     <main>
-        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" data-pause="false">
+        <div id="conferencia" class="carousel slide" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="10000">
                 <img src="assets/images/hawaii.jpg" class="d-block w-100" alt="Paisaje Hawaii">
@@ -67,10 +67,10 @@
                                 <p class="d-none d-md-block">
                                         Platzi Conf llega por pimera vez a Hawaii! Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del Team Platzi, a otros estudiantes de Platzi y a los oradores de primer nivel que tenemos para ti. Te esperamos!
                                 </p>
-                                <a class="btn btn-outline-light" href="#">
+                                <a class="btn btn-lg btn-outline-light" href="#">
                                     Ser Orador
                                 </a>
-                                <button class="btn btn-success" type="button">Comprar Tickets</button>
+                                <button class="btn btn-lg btn-success" type="button" data-toggle="modal" data-target="#compra-modal">Comprar Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -173,6 +173,53 @@
       </div>
     </section>
     <!-- /Details -->
+    <!-- be-speaker -->
+    <section id="be-speaker">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase mt-4">
+            <small>CONVIERTETE EN</small>
+            <h2>
+              Speaker
+            </h2>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+              <p>
+                  Anótate como orador para dar una <abbr data-toggle="tooltip" data-placement="bottom" title="Charlas de 5 minutos">Charla Ignite</abbr>. Cuéntanos de qué quieres hablar!
+              </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mb-1">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" name="lastname" class="form-control" placeholder="Apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <textarea type="text" class="form-control" placeholder="Cuéntanos sobre qué tu Charla"></textarea>
+                  <small class="form-text text-muted">Recuerda incluir un título para tu charla</small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <input type="button" value="Enviar" class="btn btn-success btn-block">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /be-speaker -->
     <!-- Footer -->
     <footer class="pt-4 pb-4">
         <div class="container">
@@ -202,11 +249,65 @@
         </div>
     </footer>
     <!-- /Footer -->
+    <!-- Modal -->
+    <div class="modal fade" id="compra-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Comprar Tickets</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                  
+                  <div class="form-group col">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Nombre">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Apellido">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col">
+                    <div class="form-row">
+                      <div class="col">
+                        <input type="text" class="form-control" name="city" placeholder="Ciudad">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" name="state" placeholder="Estado">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" name="zip" placeholder="Código Postal">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                      </div>
+                      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Platzi Usuario">
+                    </div>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-success">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
   </body>
 </html>

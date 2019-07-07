@@ -3,7 +3,7 @@
 Creación de un sitio estático con **Twitter Bootstrap** en el curso de Bootrap parte de la **Carrera de Arquitectura Frontend**
 
 ## Usage
-**Ir a** [pablomdd.github.io/BootstrapPlatzi](http://https://pablomdd.github.io/BootstrapPlatzi/ "pablomdd.github.io/BootstrapPlatzi/")
+**Ir a** [pablomdd.github.io/BootstrapPlatzi](https://pablomdd.github.io/BootstrapPlatzi/)
 ## Features
 
 - **Componentes usados:** Badges, Buttons, Cards, Carrousel, Forms, Modals, Navbar, Scrollspy, Tooltip.
